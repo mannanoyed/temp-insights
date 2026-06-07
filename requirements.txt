@@ -1,11 +1,4 @@
-# RunPod serverless
-runpod>=1.7.0
-
-# Environment
-python-dotenv>=1.0.0
-
-# Gemini (new unified SDK, replaces google-generativeai)
-google-genai>=1.0.0
-
-# HTTP client
-requests>=2.32.0
+runpod==1.7.9
+python-dotenv==1.0.1
+google-genai==1.16.0
+requests==2.32.3
