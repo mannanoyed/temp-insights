@@ -80,21 +80,14 @@ Rules:
 
 
 def _call_gemini(prompt: str) -> Dict[str, Any]:
-    raw_text = ""
-    try:
-        import google.genai as genai
-        client = genai.Client(api_key=GEMINI_API_KEY)
-        response = client.models.generate_content(
-            model="gemini-2.5-flash",
-            contents=prompt,
-        )
-        raw_text = response.text
-    except ImportError:
-        import google.generativeai as genai  # type: ignore
-        genai.configure(api_key=GEMINI_API_KEY)
-        model = genai.GenerativeModel("gemini-2.5-flash")
-        response = model.generate_content(prompt)
-        raw_text = response.text
+    from google import genai
+
+    client = genai.Client(api_key=GEMINI_API_KEY)
+    response = client.models.generate_content(
+        model="gemini-2.5-flash",
+        contents=prompt,
+    )
+    raw_text = response.text
 
     # Strip any accidental markdown fences
     cleaned = raw_text.strip()

@@ -4,9 +4,8 @@ runpod>=1.7.0
 # Environment
 python-dotenv>=1.0.0
 
-# Gemini (both SDK variants for compatibility)
-google-genai>=0.8.0
-google-generativeai>=0.8.0
+# Gemini (new unified SDK, replaces google-generativeai)
+google-genai>=1.0.0
 
 # HTTP client
 requests>=2.32.0
