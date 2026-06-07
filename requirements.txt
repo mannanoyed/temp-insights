@@ -1,7 +1,5 @@
-# Web framework
-fastapi>=0.111.0
-uvicorn[standard]>=0.29.0
-pydantic>=2.0.0
+# RunPod serverless
+runpod>=1.7.0
 
 # Environment
 python-dotenv>=1.0.0
@@ -10,5 +8,5 @@ python-dotenv>=1.0.0
 google-genai>=0.8.0
 google-generativeai>=0.8.0
 
-# HTTP client (for health checks etc)
+# HTTP client
 requests>=2.32.0
