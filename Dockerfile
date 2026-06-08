@@ -1,6 +1,3 @@
-# meet-insights — RunPod serverless handler
-# CPU-only, Gemini-based meeting analysis
-
 FROM --platform=linux/amd64 python:3.11-slim
 
 WORKDIR /app
@@ -14,7 +11,6 @@ RUN pip install --no-cache-dir --upgrade pip && \
     pip install --no-cache-dir -r requirements.txt
 
 COPY runpod_handler.py .
-COPY main.py .
 
 ENV PYTHONUNBUFFERED=1
 

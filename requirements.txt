@@ -1,4 +1,4 @@
 runpod==1.7.9
 python-dotenv==1.0.1
-google-genai==1.16.0
+google-genai==1.15.0
 requests==2.32.3
